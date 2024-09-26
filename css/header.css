@@ -1,0 +1,90 @@
+/* header definition */
+.header {
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  background-color: white;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.logo {
+  width: 36px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  flex: 1 1 calc(50% - 20px); /* 兩個格子，減去間距 */
+  box-sizing: border-box;
+
+}
+
+.title h1 {
+  margin-left: 10px;
+  font-size: 36px;
+}
+
+.navigation {
+  width: auto;
+  padding-right: 5%;
+  
+  display: flex;
+  flex: 1 1 calc(50% - 20px); /* 兩個格子，減去間距 */
+  align-items: center;
+  justify-content: right;
+  box-sizing: border-box;
+}
+
+.navigation ul{
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul li {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+.navigation ul li a {
+
+  color: rgb(133, 133, 133);
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 36px;
+    height: auto;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    width: 50%;
+  }
+  
+  .title h1 {
+    margin-left: 5px;
+    font-size: 30px;
+  }
+  
+  .navigation ul li {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
+}

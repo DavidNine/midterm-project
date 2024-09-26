@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/basic.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/header.css">
+
+  <!-- 導入微軟正黑體字型 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- 導入 font-awesome 的圖示 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <title>Hercules - Computer Monitor</title>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <h1>Hercules</h1>
+    </div>
+
+    <div class="navigation">
+      <ul>
+        <li><a href="#">產品</a></li>
+        <li><a href="#">財報</a></li>
+        <li><a href="#">支援</a></li>
+      </ul>  
+    </div>
+
+
+    <style>
+      .sticky {
+        position: fixed;
+        top: 0;
+        padding: 10px;
+        width: 100%;
+        z-index: 1000;
+        animation: slideIn .1s linear 0s;
+      }
+
+      @keyframes slideIn {
+        from {
+          top: -100px;
+        }
+        to {
+          top: 0px;
+        }
+      }
+    </style>
+    <script>
+
+      window.onscroll = function() {stickyHeader()};
+
+      const header = document.querySelector('.header');
+
+      function stickyHeader() {
+        if (window.pageYOffset > 300) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+
+
+    </script>
+  </div>
+
+  <div class="content">  
+    <div class="top-banner">
+      <div class="banner-container">
+        
+        <div class="banner show">
+          <div class="banner-content">
+            <div class="banner-text">
+              <h2>Hercules</h2>
+              <h1>伺服器資源監控軟體</h1>
+              <p>智能化管理，實時監控，確保伺服器運行無憂</p>
+            </div>
+            <div class="banner-image">
+              <img src="img/example.png" alt="">
+            </div>
+          </div>
+        </div>
+      
+      
+      
+        <div class="banner">
+          <div class="banner-content">
+            <div class="banner-text">
+              <h2>資料中心</h2>
+              <h1>Titan-X 伺服器系列</h1>
+              <p>超大容量，靈活擴展，企業數據儲存的不二選擇</p>
+            </div>
+            <div class="banner-image">
+              <img src="img/blade-server.png" alt="">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="banner">
+          <div class="banner-content">
+            <div class="banner-text">
+              <h2>網路安全</h2>
+              <h1>Argus 網路安全防火牆</h1>
+              <p>專業守護企業網絡安全，防範各類入侵威脅</p>
+            </div>
+            <div class="banner-image">
+              <img src="img/Firewall.png" alt="" style="width: 500px;">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="banner">
+          <div class="banner-content">
+            <div class="banner-text">
+              <h2>Hercules Keypad</h2>
+              <h1>Hercules 客製化自訂義鍵盤</h1>
+              <p>專為 IT 管理和伺服器控制台設計，快速輸入指令</p>
+            </div>
+            <div class="banner-image">
+              <img src="img/1-141023125156-removebg-preview.png" alt="" style="width: 600px;">
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="banner-selector-container">
+          <div class="selector">
+            <div class="prograss-bar">
+              <div class="prograss-filled-bar"></div>
+            </div>
+            <div class="selector-content" onclick="changeToClickedDiv(0)">
+              <span>Hercules</span>
+              <p>伺服器資源監控軟體</p>
+            </div>
+          </div>
+          <div class="selector">
+            <div class="prograss-bar">
+              <div class="prograss-filled-bar"></div>
+            </div>
+            <div class="selector-content" onclick="changeToClickedDiv(1)">  
+              <span>資料中心</span>
+              <p>Titan-X 伺服器系列</p>
+            </div>
+          </div>
+          <div class="selector">
+            <div class="prograss-bar">
+              <div class="prograss-filled-bar"></div>
+            </div>
+            <div class="selector-content" onclick="changeToClickedDiv(2)">  
+              <span>網路安全</span>
+              <p>Argus 網路安全防火牆</p>
+            </div>
+          </div>
+          <div class="selector">
+            <div class="prograss-bar">
+              <div class="prograss-filled-bar"></div>
+            </div>
+            <div class="selector-content" onclick="changeToClickedDiv(3)">  
+              <span>Hercules Keypad</span>
+              <p>Hercules 客製化自訂義鍵盤</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="simple-banner">
+      <!-- simple-banner start -->
+
+      <div class="simple">
+        <div class="simple-text-left" style="color: white;">
+          <h2>領先全球</h2>
+          <h1>探索 Hercules 強大的服務</h1>
+          <p>擁有最先進軟硬體技術，提供強大的效能及技術。</p>
+          <div class="simple-link">
+            <a href="#">探索 Hercules 的產品</a><strong>></strong> 
+          </div>
+
+          <style>
+            
+            .simple-banner {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              background-color: #000;
+              margin: 1% 0px;
+            }
+
+            .simple {
+              padding: 5%;
+              margin: auto;
+              display: flex;
+              align-items: center;
+            }
+
+            .simple-text-left {
+              display: flex;
+              flex-direction: column;
+              margin: auto;
+            }
+
+            .simple-img-right {
+              display: flex;
+              margin: auto;
+            }
+            
+            .simple-link {
+              margin-top: 5%;
+            }
+
+            .simple-link a {
+              color: rgb(255, 255, 255);
+              transition: .3s ;
+            }
+            
+            .simple-link a:hover {
+              color: rgb(170, 170, 170);
+              margin-right: 5px;
+            }
+
+            .simple-link strong {
+              margin-left: 10px;
+              font-weight: 700;
+              color: rgb(66, 197, 95);
+              transition: .3s ;
+            }
+
+            </style>
+        </div>
+        <div class="simple-img-right">
+          <img src="img/logo.png" alt="">
+        </div>
+      </div>
+    
+    
+    <!-- simple-banner end -->
+    </div>
+  
+    <div class="intro-card-container">
+      <div class="intro-card">
+        <img src="img/logo.png" alt="">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="intro-card">
+        <img src="img/logo.png" alt="">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="intro-card">
+        <img src="img/logo.png" alt="">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      
+      <style>
+        .intro-card-container {
+          width: 100%;
+          display: flex;
+          margin: 5% auto;
+        }
+        
+        .intro-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          max-width: 10%;
+          padding: 5%;
+          border-radius: 5%;
+          background: rgba(0, 0, 0, 0.2); /* 半透明背景 */
+        }
+
+        .intro-card img {
+          width: 100px;
+          margin: auto;
+        }
+
+        .intro-card p {
+          text-align: left;
+        }
+
+      </style>
+    </div>
+  
+  <!-- content end -->
+  </div>
+
+
+  <div class="footer">
+    <div class="footer-info-container">
+      <div class="footer-info">
+        <div class="footer-info-header-3">
+          <h3>公司資訊</h3>
+        </div>
+        <div class="footer-info-hr">
+          <hr>
+        </div>
+        <div class="footer-info-linker">
+          <a href="">關於我們</a>
+          <a href="">成員介紹</a>
+          <a href="">公司組織</a>
+          <a href="">研究</a>
+          <a href="">技術</a>
+          <a href="">資金</a>
+          <a href="">徵才資訊</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="footer-info-header-3">
+          <h3>最新活動</h3>
+        </div>
+        <div class="footer-info-hr">
+          <hr>
+        </div>
+        <div class="footer-info-linker">
+          <a href="">新聞中心</a>
+          <a href="">關注最新消息</a>
+          <a href="">近期相關新聞報導</a>
+          <a href="">Hercules 研發大賽</a>
+          <a href="">活動紀錄</a>
+          <a href="">2024 活動行事曆</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="footer-info-header-3">
+          <h3>相關連結</h3>
+        </div>
+        <div class="footer-info-hr">
+          <hr>
+        </div>
+        <div class="footer-info-linker">
+          <a href="">熱門文章</a>
+          <a href="">技術文件</a>
+          <a href="">訓練手冊</a>
+          <a href="">合作夥伴</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-media-link-container">
+      <div class="foot-media-link">
+        <div class="social-icons">
+            <p>關注 Hercules </p>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-github-square"></i></a>
+        </div>
+
+      </div>
+    </div>
+    <style>
+      
+      .footer {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        color: rgb(255, 255, 255);
+        background-color: black;
+        padding: 2%;
+      }
+
+      .footer-info-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer h3 {
+        font-size: 30px;
+      }
+      .footer-info hr {
+        border: 0;
+        border-top: 1px solid rgb(153, 153, 153);
+        border-radius: 20%;
+        margin: 3% 0;
+      }
+      .footer-info {
+        width: 100%;
+        padding: 2%;
+        margin: 1% 0;
+        max-width: 20%;
+      }
+      .footer-info-linker {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+      }
+      .footer-info a {
+        font-size: 16px;
+        margin: 1% 0;
+        color: rgba(167, 255, 53, 0.774);
+        transition: .3s;
+      }
+      .footer-info a:hover {
+        color: rgb(167, 255, 53);
+      }
+
+      .footer-media-link-container {
+        width: auto;
+        margin: auto;
+      }
+      
+      .social-icons {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        color: rgb(138, 138, 138);
+      }
+
+      .social-icons p {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+
+      .social-icons a {
+        color: rgb(117, 117, 117);
+        transition: .3s;
+      }
+      
+      .social-icons a:hover {
+        color: rgb(252, 252, 252);
+      }
+
+      .social-icons i {
+        margin: 0 10px;
+        font-size: 18px;
+      }
+
+    </style>
+  </div>
+
+
+
+
+  <div class="copyright">
+    <div class="copyright-logo">
+      <img src="img/logo.png" alt="">
+      <h2>Hercules</h2>
+    </div>
+    <div class="copyright-linker-container">
+      
+      <a href="">隱私權政策</a>
+      <div class="bar">|</div>
+      <a href="">公司條款</a>
+      <div class="bar">|</div>
+      <a href="">服務政策</a>
+      <div class="bar">|</div>
+      <a href="">聯絡我</a>
+      
+      
+    </div>
+    <div class="copyright-text">
+      <p>Copyright © 2024, Hercules Corporation.</p>
+    </div>
+
+    <style>
+      .copyright {
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        color: rgb(102, 102, 102);
+        margin-left: 10%;
+        line-height: 30px;
+      }
+      
+    
+      .copyright-logo {
+        display: flex;
+        align-items: center;
+        margin: 1% 0;
+      }
+
+      .copyright-logo img {
+        width: 40px;
+      }
+      
+      .copyright-text p{
+        font-size: 12px;
+        font-family: "Arial";
+      }
+
+      .copyright-linker-container {
+        display: flex;
+        align-items: center;
+      }
+      
+      .copyright-linker-container a {
+        transition: .3s;
+        color: rgb(102, 102, 102);
+      }
+
+      .copyright-linker-container a:hover {
+        color: rgb(172, 172, 172);
+      }
+
+      .bar {
+        color: rgb(161, 161, 161);
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+      }
+
+
+    </style>
+  </div>
+
+<script src="js/slideShow.js"></script>
+</body>
+</html>
