@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/basic.css">
+  <link rel="stylesheet" href="../css/header.css">
+
+  <!-- 導入微軟正黑體字型 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- 導入 font-awesome 的圖示 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <title>Hercules - Computer Monitor</title>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <img src="../img/logo.png" alt="Logo" class="logo">
+      <h1>Hercules</h1>
+    </div>
+
+    <div class="navigation">
+      <ul>
+        <li><a href="#">產品</a></li>
+        <li><a href="#">財報</a></li>
+        <li><a href="#">支援</a></li>
+      </ul>  
+    </div>
+
+
+    <style>
+      .sticky {
+        position: fixed;
+        top: 0;
+        padding: 10px;
+        width: 100%;
+        z-index: 1000;
+        animation: slideIn .1s linear 0s;
+      }
+
+      @keyframes slideIn {
+        from {
+          top: -100px;
+        }
+        to {
+          top: 0px;
+        }
+      }
+    </style>
+    <script>
+
+      window.onscroll = function() {stickyHeader()};
+
+      const header = document.querySelector('.header');
+
+      function stickyHeader() {
+        if (window.pageYOffset > 300) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+
+
+    </script>
+  </div>
+
+
+  <div class="content">
+    
+      <!-- 主打商品的 banner 畫面  -->
+    <div class="main-product-seris-banner">
+      
+      <style>
+        /*=================================================== 
+                          主打商品 CSS 定義
+        =====================================================*/
+        
+        .main-product-seris-banner {
+          background: #000;
+          width: auto;
+          padding: 10%;
+        }
+        
+        .banner {
+          display: flex;
+          margin: auto;
+        }
+
+        .banner-text {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          padding: 0 5%;
+        }
+
+        .banner-text h1 {
+          font-size: 60px;
+          margin: 5% 0;
+        } 
+        
+        .banner-text p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+
+        .banner-image {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .banner-image img {
+          width: 800px;
+          height: auto;
+        }
+
+        
+      </style>
+      
+      <div class="banner">
+        
+      <!-- 主打商品的文字部分 -->
+        <div class="banner-text">
+          <h1>Titan-X 5590</h1>
+          <p>Titan-X 5590 是業界領先的人工智慧伺服器，基於 Titan-X 系列的強大基礎，結合了最新的 NVIDIA® AI 技術，為全球人工智慧運算提供了無與倫比的計算能力。集成了 Titan-X 系列的眾多優勢，無論是在高效能計算、深度學習還是數據分析領域，Titan-X 5590 都能夠輕鬆應對，並提供突破性的運算效率。
+            配備先進的 NVIDIA A100 Tensor Core GPU，Titan-X 5590 能夠實現前所未有的 AI 訓練與推理性能，為開發者、科學家及企業級用戶提供一個高度整合的解決方案。無論是處理複雜的神經網絡，還是支持海量數據的即時分析，Titan-X 5590 都能以超高吞吐量和極低延遲進行處理，為大規模數據中心和雲端運算提供無縫擴展。</p>
+        </div>
+        
+        <!-- 主打商品的圖片部分 -->
+        <div class="banner-image">
+          <img src="../img/blade-server.png" alt="">
+        </div>
+
+
+      </div>
+      
+    </div>
+  
+  
+  </div>
+</body>
+</html>

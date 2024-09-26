@@ -102,6 +102,7 @@
         </div>
 
 
+
         <div class="banner">
           <div class="banner-content">
             <div class="banner-text">
@@ -246,16 +247,34 @@
   
     <div class="intro-card-container">
       <div class="intro-card">
-        <img src="img/logo.png" alt="">
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="intro-card-img-container">
+          <img src="img/logo.png" alt="">
+        </div>
+        <div class="intro-card-text-container">
+          <h2>新聞中心</h2>
+          <p>最新最先進的技術發表，了解更多 Hercules 最新消息。</p>
+        </div>
+        <button>了解更多</button>
       </div>
       <div class="intro-card">
-        <img src="img/logo.png" alt="">
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="intro-card-img-container">
+          <img src="img/blade-server.png" alt="">
+        </div>
+        <div class="intro-card-text-container">
+          <h2>全新系列 Titan-X</h2>
+          <p>結合AI監控管理，強力的運算能力，建立AI的最佳選擇。</p>
+        </div>
+        <button>了解更多</button>
       </div>
       <div class="intro-card">
-        <img src="img/logo.png" alt="">
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="intro-card-img-container">
+          <img src="img/logo.png" alt="">
+        </div>
+        <div class="intro-card-text-container">
+          <h2>新聞中心</h2>
+          <p>最新最先進的技術發表，了解更多 Hercules 最新消息</p>
+        </div>
+        <button>了解更多</button>
       </div>
       
       <style>
@@ -270,15 +289,46 @@
           flex-direction: column;
           align-items: center;
           margin: auto;
-          max-width: 10%;
-          padding: 5%;
+          max-width: 400px;
+          height: 600px;
+          padding: 2%;
           border-radius: 5%;
-          background: rgba(0, 0, 0, 0.2); /* 半透明背景 */
+          background: rgb(255, 255, 255); /* 半透明背景 */
+          box-shadow: 12px 12px 40px 15px rgba(184,184,184,1);
+        }
+        .intro-card button {
+          position: relative;
+          bottom: 0;
         }
 
+        .intro-card-img-container {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          height: 200px;
+
+          max-width: 10%;
+          
+        }
+
+        .intro-card-text-container {
+          height: 200px;
+        }
+
+        .intro-card-text-container h2 {
+          text-align: center;
+          margin: 20px 0;
+        }
+
+        .intro-card-text-container p{
+          font-size: 20px;
+          color: rgb(85, 85, 85);
+        }
+        
         .intro-card img {
-          width: 100px;
+          width: 200px;
           margin: auto;
+          padding: 10%;
         }
 
         .intro-card p {
