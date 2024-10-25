@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/basic.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/home_page/dropdown.css">
 
   <!-- 導入微軟正黑體字型 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,7 @@
 
     <div class="navigation">
       <ul>
-        <li><a href="#">產品</a></li>
+        <li><a href="pages/product.html">產品</a></li>
         <li><a href="#">財報</a></li>
         <li><a href="#">支援</a></li>
       </ul>  
@@ -230,7 +231,7 @@
             .simple-link strong {
               margin-left: 10px;
               font-weight: 700;
-              color: rgb(66, 197, 95);
+              color: #1E90FF;
               transition: .3s ;
             }
 
@@ -248,94 +249,48 @@
     <div class="intro-card-container">
       <div class="intro-card">
         <div class="intro-card-img-container">
-          <img src="img/logo.png" alt="">
+          <img src="img/SpaceX-2.jpg" alt="">
         </div>
         <div class="intro-card-text-container">
+          <h4>技術 | 新聞</h4>
+          <h2>Space X 火星計畫</h2>
+          <p>Hercules 支援代碼開發，共同努力實現火星計畫。</p>
+        </div>
+        <div class="btn-wrap"><button>了解更多</button></div>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-img-container">
+          <img src="img/News_center.png" alt="">
+        </div>
+        <div class="intro-card-text-container">
+          <h4>技術 | 新聞</h4>
           <h2>新聞中心</h2>
           <p>最新最先進的技術發表，了解更多 Hercules 最新消息。</p>
         </div>
-        <button>了解更多</button>
+        <div class="btn-wrap"><button>了解更多</button></div>
       </div>
       <div class="intro-card">
         <div class="intro-card-img-container">
-          <img src="img/blade-server.png" alt="">
+          <img src="img/orange-black-server1200x675s.jpg" alt="">
         </div>
         <div class="intro-card-text-container">
-          <h2>全新系列 Titan-X</h2>
-          <p>結合AI監控管理，強力的運算能力，建立AI的最佳選擇。</p>
+            <h4>伺服器 | 產品</h4>
+            <h2>全新系列 Titan-X</h2>
+            <p>結合AI監控管理，強力的運算能力，建立AI的最佳選擇。</p>
         </div>
-        <button>了解更多</button>
+        <div class="btn-wrap"><button>了解更多</button></div>
       </div>
       <div class="intro-card">
         <div class="intro-card-img-container">
-          <img src="img/logo.png" alt="">
+          <img src="img/github.png" alt="">
         </div>
         <div class="intro-card-text-container">
-          <h2>新聞中心</h2>
-          <p>最新最先進的技術發表，了解更多 Hercules 最新消息</p>
+            <h4>開源專案 | 專案</h4>
+            <h2>開源中心</h2>
+            <p>加入 Hercules 與各大領域專家、知名軟體開發者共同參與開源專案。</p>
         </div>
-        <button>了解更多</button>
+        <div class="btn-wrap"><button>了解更多</button></div>
       </div>
-      
-      <style>
-        .intro-card-container {
-          width: 100%;
-          display: flex;
-          margin: 5% auto;
-        }
-        
-        .intro-card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: auto;
-          max-width: 400px;
-          height: 600px;
-          padding: 2%;
-          border-radius: 5%;
-          background: rgb(255, 255, 255); /* 半透明背景 */
-          box-shadow: 12px 12px 40px 15px rgba(184,184,184,1);
-        }
-        .intro-card button {
-          position: relative;
-          bottom: 0;
-        }
-
-        .intro-card-img-container {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          height: 200px;
-
-          max-width: 10%;
-          
-        }
-
-        .intro-card-text-container {
-          height: 200px;
-        }
-
-        .intro-card-text-container h2 {
-          text-align: center;
-          margin: 20px 0;
-        }
-
-        .intro-card-text-container p{
-          font-size: 20px;
-          color: rgb(85, 85, 85);
-        }
-        
-        .intro-card img {
-          width: 200px;
-          margin: auto;
-          padding: 10%;
-        }
-
-        .intro-card p {
-          text-align: left;
-        }
-
-      </style>
     </div>
   
   <!-- content end -->
@@ -407,13 +362,16 @@
       </div>
     </div>
     <style>
-      
+      .footer * {
+        margin: 0;
+        padding: 0;
+      }
       .footer {
         display: flex;
         flex-direction: column;
         width: auto;
         color: rgb(255, 255, 255);
-        background-color: black;
+        background-color: #003366;
         padding: 2%;
       }
 
@@ -446,11 +404,11 @@
       .footer-info a {
         font-size: 16px;
         margin: 1% 0;
-        color: rgba(167, 255, 53, 0.774);
+        color: #87CEEB;
         transition: .3s;
       }
       .footer-info a:hover {
-        color: rgb(167, 255, 53);
+        color: #00BFFF;
       }
 
       .footer-media-link-container {
@@ -462,7 +420,7 @@
         display: flex;
         padding: 5px;
         align-items: center;
-        color: rgb(138, 138, 138);
+        color: rgb(196, 196, 196);
       }
 
       .social-icons p {
@@ -471,12 +429,12 @@
       }
 
       .social-icons a {
-        color: rgb(117, 117, 117);
+        color: rgb(196, 196, 196);
         transition: .3s;
       }
       
       .social-icons a:hover {
-        color: rgb(252, 252, 252);
+        color: rgb(255, 255, 255);
       }
 
       .social-icons i {
@@ -485,84 +443,81 @@
       }
 
     </style>
-  </div>
+</div>
 
-
-
-
-  <div class="copyright">
+<div class="copyright">
     <div class="copyright-logo">
-      <img src="img/logo.png" alt="">
-      <h2>Hercules</h2>
+        <img src="../img/logo.png" alt="">
+        <h2>Hercules</h2>
     </div>
     <div class="copyright-linker-container">
-      
-      <a href="">隱私權政策</a>
-      <div class="bar">|</div>
-      <a href="">公司條款</a>
-      <div class="bar">|</div>
-      <a href="">服務政策</a>
-      <div class="bar">|</div>
-      <a href="">聯絡我</a>
-      
-      
+        
+        <a href="">隱私權政策</a>
+        <div class="bar">|</div>
+        <a href="">公司條款</a>
+        <div class="bar">|</div>
+        <a href="">服務政策</a>
+        <div class="bar">|</div>
+        <a href="">聯絡我</a>
+        
+        
     </div>
     <div class="copyright-text">
-      <p>Copyright © 2024, Hercules Corporation.</p>
+        <p>Copyright © 2024, Hercules Corporation.</p>
     </div>
 
     <style>
-      .copyright {
-        padding: 2%;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        color: rgb(102, 102, 102);
-        margin-left: 10%;
-        line-height: 30px;
-      }
-      
-    
-      .copyright-logo {
-        display: flex;
-        align-items: center;
-        margin: 1% 0;
-      }
+        .copyright * {
+            margin: 0;
+            padding: 0;
+        }
+        .copyright {
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            color: rgb(102, 102, 102);
+            margin-left: 10%;
+            line-height: 30px;
+        }
+        
+        .copyright-logo {
+            display: flex;
+            align-items: center;
+            margin: 1% 0;
+        }
 
-      .copyright-logo img {
-        width: 40px;
-      }
-      
-      .copyright-text p{
-        font-size: 12px;
-        font-family: "Arial";
-      }
+        .copyright-logo img {
+            width: 40px;
+        }
+        
+        .copyright-text p{
+            font-size: 12px;
+            font-family: "Arial";
+        }
 
-      .copyright-linker-container {
-        display: flex;
-        align-items: center;
-      }
-      
-      .copyright-linker-container a {
-        transition: .3s;
-        color: rgb(102, 102, 102);
-      }
+        .copyright-linker-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .copyright-linker-container a {
+            transition: .3s;
+            color: rgb(102, 102, 102);
+        }
 
-      .copyright-linker-container a:hover {
-        color: rgb(172, 172, 172);
-      }
+        .copyright-linker-container a:hover {
+            color: rgb(172, 172, 172);
+        }
 
-      .bar {
-        color: rgb(161, 161, 161);
-        display: flex;
-        align-items: center;
-        margin: 0 10px;
-      }
-
-
+        .bar {
+            color: rgb(161, 161, 161);
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
     </style>
-  </div>
-
+</div>
 <script src="js/slideShow.js"></script>
 </body>
 </html>

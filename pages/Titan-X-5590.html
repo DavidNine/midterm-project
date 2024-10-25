@@ -1,122 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/basic.css">
-  <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/product/product.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Titan-X 5590 伺服器 - 頂尖效能，全面應對未來需求">
 
-  <!-- 導入微軟正黑體字型 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../css/basic.css"> -->
+    <link rel="stylesheet" href="../css/header.css">
   
-  <!-- 導入 font-awesome 的圖示 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <title>Hercules - Computer Monitor</title>
+    <!-- 導入微軟正黑體字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- 導入 font-awesome 的圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Titan-X 5590 伺服器</title>
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+        }
+        section h2 {
+            color: #003366;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        section p {
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+        }
+        .features, .specs, .use-cases {
+            margin-bottom: 40px;
+        }
+        
+    </style>
 </head>
 <body>
-  <div class="header">
+<div class="header">
     <div class="title">
-      <img src="../img/logo.png" alt="Logo" class="logo">
-      <a href="/index.html">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+        <a href="/index.html">
         <h1>Hercules</h1>
-      </a>
+        </a>
     </div>
 
     <div class="navigation">
-      <ul>
-        <li><a href="#">產品</a></li>
+        <ul>
+        <li><a href="./product.html">產品</a></li>
         <li><a href="#">財報</a></li>
         <li><a href="#">支援</a></li>
-      </ul>  
+        </ul>  
     </div>
 
 
     <style>
-      .sticky {
+        .sticky {
         position: fixed;
         top: 0;
         padding: 10px;
         width: 100%;
         z-index: 1000;
         animation: slideIn .1s linear 0s;
-      }
+        }
 
-      @keyframes slideIn {
+        @keyframes slideIn {
         from {
-          top: -100px;
+            top: -100px;
         }
         to {
-          top: 0px;
+            top: 0px;
         }
-      }
+        }
     </style>
     <script>
 
-      window.onscroll = function() {stickyHeader()};
+        window.onscroll = function() {stickyHeader()};
 
-      const header = document.querySelector('.header');
+        const header = document.querySelector('.header');
 
-      function stickyHeader() {
+        function stickyHeader() {
         if (window.pageYOffset > 300) {
-          header.classList.add("sticky");
+            header.classList.add("sticky");
         } else {
-          header.classList.remove("sticky");
+            header.classList.remove("sticky");
         }
-      }
+        }
 
 
     </script>
-  </div>
+</div>
 
 
-  <div class="content">
-    
-      <!-- 主打商品的 banner 畫面  -->
-    <div class="main-product-seris-banner">
-    
-      <div class="banner">
-        
-      <!-- 主打商品的文字部分 -->
-        <div class="banner-text">
-          <h1><span class="typing-text-head typing-text"></span></h1>
-          <h2><span class="typing-text-sub  typing-text"></span></h2>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title-wrapper"><h1>伺服器系列</h1></div>
-        <div class="card-wrapper">
-        <!-- Titan-X 5590 -->
-          <div class="card">
-            <div class="card-img-wrapper"><img src="../img/blade-server.png" alt=""></div>
-            <div class="card-txt-wrapper">
-                <h4>Titan-X Seris | 伺服器</h2>
-                <h2>Titan-X 5590</h2>
-                <p>專為處理最具挑戰性的計算工作負載而設計，結合卓越的硬體配置與智能管理功能。</p>
-            </div>
-            <div class="btn-wrap"><button><a href="./Titan-X-5590.html">了解更多</a></button></div>
-          </div>
 
 
-          <div class="card">
-            <div class="card-img-wrapper"><img src="../img/blade-server.png" alt=""></div>
-            <div class="card-txt-wrapper"><p>Titan-X 5390</p></div>
-          </div>
-          <div class="card">
-            <div class="card-img-wrapper"><img src="../img/blade-server.png" alt=""></div>
-            <div class="card-txt-wrapper"><p>Titan-X 4000</p></div>
-          </div>
-      </div>
-    </div>
+<header>
+    <h1>Titan-X 5590 伺服器</h1>
+    <p>頂尖效能，全面應對未來需求</p>
+</header>
 
-    
+<section class="features">
+    <h2>關鍵特點</h2>
+    <p>Titan-X 5590 伺服器專為處理最具挑戰性的計算工作負載而設計，結合卓越的硬體配置與智能管理功能。</p>
+    <ul>
+        <li>強大計算效能 - 最新一代多核心處理器，應對苛刻需求</li>
+        <li>高效散熱設計 - 智能風扇控制，確保高效運行</li>
+        <li>彈性擴展能力 - 支援 32 個 DIMM 插槽，擴展至 4TB 記憶體</li>
+        <li>企業級可靠性 - ECC 記憶體與 RAID 支援，數據保護到位</li>
+    </ul>
+</section>
 
-  </div>
+<section class="specs">
+    <h2>技術規格</h2>
+    <table>
+        <tr>
+            <th>項目</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td>處理器</td>
+            <td>支援 Intel® Xeon® 或 AMD EPYC</td>
+        </tr>
+        <tr>
+            <td>記憶體</td>
+            <td>32 個 DIMM 插槽，支援 4TB DDR5 ECC</td>
+        </tr>
+        <tr>
+            <td>存儲</td>
+            <td>8 個 NVMe SSD 插槽</td>
+        </tr>
+        <tr>
+            <td>擴展插槽</td>
+            <td>多個 PCIe 5.0 插槽</td>
+        </tr>
+        <tr>
+            <td>電源供應</td>
+            <td>雙冗餘 80 PLUS 白金級電源</td>
+        </tr>
+        <tr>
+            <td>管理功能</td>
+            <td>IPMI 2.0 遠端管理</td>
+        </tr>
+    </table>
+</section>
+
+<section class="use-cases">
+    <h2>應用場景</h2>
+    <p>Titan-X 5590 伺服器可用於各類高效能需求的場景，如虛擬化、人工智能、大數據分析等。</p>
+</section>
+
 
 <div class="footer">
     <div class="footer-info-container">
@@ -286,6 +353,7 @@
     <div class="copyright-text">
         <p>Copyright © 2024, Hercules Corporation.</p>
     </div>
+
     <style>
         .copyright * {
             margin: 0;
@@ -339,8 +407,7 @@
     </style>
 </div>
 
-  
-</body>
-<script src="/js/typing.js"></script>
 
+
+</body>
 </html>

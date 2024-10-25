@@ -1,3 +1,20 @@
+:root {
+  --header-logo-color: rgb(0, 0, 0);
+  --header-font-color: rgb(133, 133, 133);
+
+}
+
+.header * {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.header ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
 /* header definition */
 .header {
   padding: 10px;
@@ -8,6 +25,11 @@
   gap: 20px; 
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.header a{
+  display: flex;
+  color: var(--header-logo-color);
 }
 
 .logo {

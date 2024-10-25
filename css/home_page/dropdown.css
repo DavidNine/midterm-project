@@ -1,0 +1,21 @@
+/*
+  Make the dropdown content invisible.
+*/
+.dropdown-content { 
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: all .6s;
+}
+
+
+
+.dropdown-product:hover .dropdown-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+

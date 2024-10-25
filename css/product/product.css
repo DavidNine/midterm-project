@@ -1,0 +1,152 @@
+:root {
+  --header-font-color: rgb(0, 0, 0);
+  --classi-font-color: rgb(120, 120, 120);
+}
+
+
+
+
+/*=================================================== 
+                  主打商品 CSS 定義
+=====================================================*/
+
+.main-product-seris-banner {
+  background: #ffffff;
+  width: auto;
+  padding: 10%;
+}
+
+.banner {
+  display: flex;
+  margin: auto;
+}
+
+.banner-text {
+  color: var(--classi-font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 5%;
+  height: 50vh;
+}
+
+.banner-text h1 {
+  font-size: 60px;
+  margin: 5% 0;
+} 
+
+.banner-text p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+        
+.typing-text::after {
+  content: '|';
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
+
+
+
+.section {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.section-title-wrapper {
+  width: auto;
+  padding: 2em;
+}
+
+.product-wrapper h1{
+  color: var(--header-font-color);
+  margin: 20px 0;
+}
+
+.card-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.products a {
+  text-decoration: none;
+  color: var(--classi-font-color);
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 400px;
+  max-width: 400px;
+  height: 500px;
+  max-height: 500px;
+  margin-bottom: 20px;
+  background: rgb(255, 255, 255); /* 半透明背景 */
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.103);
+  transition: .3s;
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 10px;
+}
+
+.btn-wrap a {
+  color: white;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.103);
+}
+
+.card-img-wrapper {
+  background-color: black;
+}
+
+.card-img-wrapper img {
+  width: 400px;
+  height: 250px;
+}
+
+.card-txt-wrapper { 
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 250px;
+  padding: 20px;
+}
+
+.card-txt-wrapper h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 20px 0;
+}
+
+.card-txt-wrapper h4 {
+  font-size: 1em;
+}
+
+.card-txt-wrapper p {
+  font-size: 16px;
+  color: rgb(85, 85, 85);
+}
