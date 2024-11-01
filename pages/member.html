@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hercules - 客戶支援">
-    <title>Hercules 客戶支援</title>
+    <meta name="description" content="Hercules - 成員介紹">
+    <title>Hercules 成員介紹</title>
     <link rel="stylesheet" href="../css/header.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
@@ -25,75 +26,75 @@
         section {
             padding: 20px;
         }
+        
         a {
             text-decoration: none;
         }
+
         h2 {
             color: var(--header-logo-color);
-            font-size: 24px;
+            font-size: 36px;
             margin-bottom: 10px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding-bottom: 5px;
         }
 
-        
-        .support-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .ceo-name {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
-        .support-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 18px;
-            color: #333;
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            text-align: left;
         }
 
-        .support-form input[type="text"],
-        .support-form input[type="email"],
-        .support-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+
+        /* CEO 卡片樣式 */
+        .ceo-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-text {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            text-align: left;
+        }
+
+        .ceo-profile {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        .ceo-profile img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .ceo-profile p {
+            color: rgb(100, 100, 100);
             font-size: 16px;
-            box-sizing: border-box;
+        }
+        .ceo-profile-content-container {
+            margin-bottom: 10%;
+            margin-top: 5%;
         }
 
-        .support-form textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .support-form button {
-            width: 100%;
-            padding: 10px;
-            background-color: #003366;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .support-form button:hover {
-            background-color: #005bb5;
-        }
     </style>
 </head>
 <body>
 
-
+<!-- Header -->
 <div class="header">
     <div class="title">
         <img src="../img/logo.png" alt="Logo" class="logo">
-        <a href="../index.html">
+        <a href="/index.html">
             <h1>Hercules</h1>
         </a>
     </div>
@@ -106,26 +107,34 @@
     </div>
 </div>
 
-<section>
-    <h2>客戶支援</h2>
-    <p>如果您有任何問題或需要幫助，請填寫下方的表單，我們的支援團隊會儘快與您聯繫。</p>
+
+<section class="ceo-profile-content-container">
+    <div class="ceo-name">
+        <div class="text-container">
+            <h2>Guanyan Wang</h2>
+            <p>Founder, President and CEO</p>
+        </div>
+    </div>
     
-    <div class="support-form">
-        <form action="#" method="post">
-            <label for="name">姓名</label>
-            <input type="text" id="name" name="name" required>
+    <div class="ceo-container">
+        <div class="ceo-profile">
+            
+            <img src="../img/ceo.jpg" alt="CEO照片">
 
-            <label for="email">電子郵件</label>
-            <input type="email" id="email" name="email" required>
+            <div class="profile-text">
+                <p> 擁有豐富的企業管理經驗，專注於公司策略與創新發展。他不僅在管理領域展現卓越的領導能力，還具備深厚的技術背景，精通多種編程語言，包括 Python、Rust 和 C/C++，並且熟悉先進的軟體開發流程與系統架構設計。
+                    <br>
+                    <br>
+                    作為 Hercules 的首席執行官 (CEO)，帶領團隊積極進取，不僅在業務戰略上做出深刻洞察，同時也能在技術決策上發揮重要作用，促進產品創新與技術迭代。他的技術能力為公司注入了一種與眾不同的技術驅動型管理風格，使 Hercules 不僅在市場上保持競爭力，更成為行業中的創新典範。
+                    <br>
+                    <br>
+                    在日常工作中積極參與技術開發和代碼審查，將自己對高品質代碼的嚴謹態度和對性能優化的追求傳遞給團隊。他在開源社區中也頗具影響力，曾參與多個開源項目並為之貢獻代碼，這讓 Hercules 的技術開發始終與行業最前沿保持同步。
+                    <br>
+                    <br>
+                    憑藉其技術專長和管理才華，正帶領 Hercules 不斷拓展業務版圖，並在不斷變化的市場中穩步前行，邁向新的高度。</p>
+            </div>
 
-            <label for="subject">主題</label>
-            <input type="text" id="subject" name="subject" required>
-
-            <label for="message">問題描述</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">提交支援請求</button>
-        </form>
+        </div>
     </div>
 </section>
 
@@ -140,7 +149,7 @@
         </div>
         <div class="footer-info-linker">
           <a href="">關於我們</a>
-          <a href="./member.html'">成員介紹</a>
+          <a href="./member.html">成員介紹</a>
           <a href="">公司組織</a>
           <a href="">研究</a>
           <a href="">技術</a>

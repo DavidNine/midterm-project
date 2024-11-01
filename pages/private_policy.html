@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hercules - 客戶支援">
-    <title>Hercules 客戶支援</title>
+    <meta name="description" content="Hercules - 成員介紹">
+    <title>Hercules 成員介紹</title>
     <link rel="stylesheet" href="../css/header.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
@@ -25,71 +26,52 @@
         section {
             padding: 20px;
         }
+        
         a {
             text-decoration: none;
         }
+
         h2 {
             color: var(--header-logo-color);
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 32px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
             padding-bottom: 5px;
         }
 
-        
-        .support-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .container {
+            display: flex;
+            justify-content: center;
         }
 
-        .support-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 18px;
-            color: #333;
+        .profile-text {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            text-align: left;
         }
 
-        .support-form input[type="text"],
-        .support-form input[type="email"],
-        .support-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        .profile p {
+            color: rgb(100, 100, 100);
             font-size: 16px;
-            box-sizing: border-box;
+        }
+        .profile-content-container {
+            margin-bottom: 10%;
+            margin-top: 5%;
         }
 
-        .support-form textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .support-form button {
-            width: 100%;
-            padding: 10px;
-            background-color: #003366;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .support-form button:hover {
-            background-color: #005bb5;
-        }
     </style>
 </head>
 <body>
 
-
+<!-- Header -->
 <div class="header">
     <div class="title">
         <img src="../img/logo.png" alt="Logo" class="logo">
@@ -106,26 +88,56 @@
     </div>
 </div>
 
-<section>
-    <h2>客戶支援</h2>
-    <p>如果您有任何問題或需要幫助，請填寫下方的表單，我們的支援團隊會儘快與您聯繫。</p>
+
+<section class="profile-content-container">
     
-    <div class="support-form">
-        <form action="#" method="post">
-            <label for="name">姓名</label>
-            <input type="text" id="name" name="name" required>
+    
+    <div class="container">
+        <div class="profile">
+            <div class="profile-text">
+                    <h2>隱私權政策</h2>
+                    Hercules（以下簡稱「本公司」或「我們」）非常重視用戶的隱私權。本隱私政策描述了我們如何收集、使用和保護您在使用本公司網站和服務時提供的個人信息。請您詳細閱讀本隱私政策，了解我們對您隱私的承諾。
+                    
+                    <h2>信息收集</h2>
+                    我們會收集與您互動過程中提供的部分個人資料，包括但不限於：
+                    
+                    基本信息：如姓名、電子郵件地址、聯絡電話等。
+                    瀏覽信息：包括您的 IP 地址、瀏覽器類型、瀏覽歷史等技術信息，以便分析流量和用戶行為。
+                    用戶提交的內容：您在使用我們的產品和服務時主動提供的任何數據，例如提交的支援請求、問題反饋等。
+                    
+                    <h2>信息使用</h2>
+                    我們收集的個人信息將用於以下目的：
+                    
+                    提供服務：用於處理您的訂單、提供技術支援及客戶服務等。
+                    改善用戶體驗：根據您的瀏覽記錄和反饋，改進我們的產品和服務。
+                    市場營銷：在獲得您的同意後，我們可能會使用您的聯絡方式發送有關新產品、特別優惠和其他您可能感興趣的資訊。
+                    
+                    <h2>信息分享</h2>
+                    我們不會在未經您同意的情況下向第三方分享您的個人信息，除非在以下情況：
+                    
+                    法律要求：根據法律規定或政府要求，我們可能需要披露您的信息。
+                    業務轉移：在業務重組、合併或出售的情況下，您的個人信息可能會作為資產轉移至新的業主。
+                    <h2>信息安全</h2>
+                    我們採取合理的技術和組織措施來保護您的個人信息不受未經授權的訪問、洩露、更改或破壞。然而，請理解沒有任何網絡傳輸或數據儲存方法是百分百安全的，因此我們無法保證您的信息絕對安全。
+                    
+                    <h2>Cookies 的使用</h2>
+                    我們可能會使用 Cookies 等技術來增強您的瀏覽體驗。Cookies 是由網站伺服器發送至您的瀏覽器並儲存在您設備上的小型文件，幫助我們追蹤您的使用情況並定製內容。您可以選擇拒絕 Cookies，但這可能會影響某些功能的正常使用。
+                    
+                    <h2>用戶權利</h2>
+                    您可以隨時選擇查看、更正或刪除您的個人信息。若您希望退出我們的郵件通訊或刪除您的帳戶，請聯絡我們的客戶支援團隊。
+                    
+                    <h2>隱私政策更新</h2>
+                    我們可能會根據需要不時更新本隱私政策，任何變更都會在本頁面上發布。建議您定期查看本政策，以了解最新的數據保護做法。
+                    
+                    <h2>聯絡我們</h2>
+                    若您對本隱私政策有任何問題或擔憂，請通過以下方式聯絡我們：
+                    
+                    電子郵件：privacy@hercules.com
+                    電話：+123-456-7890
+                </p>
+            </div>
 
-            <label for="email">電子郵件</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="subject">主題</label>
-            <input type="text" id="subject" name="subject" required>
-
-            <label for="message">問題描述</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">提交支援請求</button>
-        </form>
+        </div>
     </div>
 </section>
 
@@ -140,7 +152,7 @@
         </div>
         <div class="footer-info-linker">
           <a href="">關於我們</a>
-          <a href="./member.html'">成員介紹</a>
+          <a href="./member.html">成員介紹</a>
           <a href="">公司組織</a>
           <a href="">研究</a>
           <a href="">技術</a>
