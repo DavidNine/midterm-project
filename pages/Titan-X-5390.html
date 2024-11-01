@@ -1,135 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/basic.css">
-  <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/product/product.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Titan-X 5590 伺服器 - 頂尖效能，全面應對未來需求">
 
-  <!-- 導入微軟正黑體字型 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../css/basic.css"> -->
+    <link rel="stylesheet" href="../css/header.css">
   
-  <!-- 導入 font-awesome 的圖示 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <title>Hercules - Computer Monitor</title>
+    <!-- 導入微軟正黑體字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- 導入 font-awesome 的圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <title>Titan-X 5590 伺服器</title>
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+        }
+        section h2 {
+            color: #003366;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        section p {
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #003366;
+            color: white;
+        }
+        .features, .specs, .use-cases {
+            margin-bottom: 40px;
+        }
+        
+    </style>
 </head>
 <body>
-  <div class="header">
+<div class="header">
     <div class="title">
-      <img src="../img/logo.png" alt="Logo" class="logo">
-      <a href="../index.html">
+        <img src="../img/logo.png" alt="Logo" class="logo">
+        <a href="../index.html">
         <h1>Hercules</h1>
-      </a>
+        </a>
     </div>
 
     <div class="navigation">
-      <ul>
-        <li><a href="#">產品</a></li>
+        <ul>
+        <li><a href="./product.html">產品</a></li>
         <li><a href="./financial_statement.html">財報</a></li>
         <li><a href="./support.html">支援</a></li>
-      </ul>  
+        </ul>  
     </div>
 
 
     <style>
-      .sticky {
+        .sticky {
         position: fixed;
         top: 0;
         padding: 10px;
         width: 100%;
         z-index: 1000;
         animation: slideIn .1s linear 0s;
-      }
+        }
 
-      @keyframes slideIn {
+        @keyframes slideIn {
         from {
-          top: -100px;
+            top: -100px;
         }
         to {
-          top: 0px;
+            top: 0px;
         }
-      }
+        }
     </style>
     <script>
 
-      window.onscroll = function() {stickyHeader()};
+        window.onscroll = function() {stickyHeader()};
 
-      const header = document.querySelector('.header');
+        const header = document.querySelector('.header');
 
-      function stickyHeader() {
+        function stickyHeader() {
         if (window.pageYOffset > 300) {
-          header.classList.add("sticky");
+            header.classList.add("sticky");
         } else {
-          header.classList.remove("sticky");
+            header.classList.remove("sticky");
         }
-      }
+        }
 
 
     </script>
-  </div>
+</div>
 
 
-  <div class="content">
-    
-      <!-- 主打商品的 banner 畫面  -->
-    <div class="main-product-seris-banner">
-    
-      <div class="banner">
-        
-      <!-- 主打商品的文字部分 -->
-        <div class="banner-text">
-          <h1><span class="typing-text-head typing-text"></span></h1>
-          <h2><span class="typing-text-sub  typing-text"></span></h2>
-        </div>
 
-      </div>
-    </div>
+<header>
+    <h1>Titan-X 5390 伺服器</h1>
+    <p>高性價比運算解決方案，專為中小企業設計</p>
+</header>
 
-    <div class="section">
-        <div class="section-title-wrapper"><h1>伺服器系列</h1></div>
-        <div class="card-wrapper">
-        <!-- Titan-X 5590 -->
-          <div class="card">
-            <div class="card-img-wrapper"><img src="../img/blade-server.png" alt=""></div>
-            <div class="card-txt-wrapper">
-                <h4>Titan-X Seris | 伺服器</h2>
-                <h2>Titan-X 5590</h2>
-                <p>專為處理最具挑戰性的計算工作負載而設計，結合卓越的硬體配置與智能管理功能。</p>
-            </div>
-            <div class="btn-wrap"><button><a href="./Titan-X-5590.html">了解更多</a></button></div>
-          </div>
+<section class="features">
+    <h2>關鍵特點</h2>
+    <p>Titan-X 5390 伺服器平衡性能與成本，為中小企業提供可靠的計算能力，滿足日常業務運行需求。</p>
+    <ul>
+        <li>穩定運行效能 - 支援多核心處理器，足夠應對日常業務需求</li>
+        <li>經濟實惠的散熱設計 - 高效風扇和散熱技術，確保穩定運行</li>
+        <li>靈活的擴展性 - 支援 16 個 DIMM 插槽，最大支援 2TB 記憶體</li>
+        <li>可靠的數據保護 - ECC 記憶體與 RAID 支援，保障日常數據安全</li>
+    </ul>
+</section>
+
+<section class="specs">
+    <h2>技術規格</h2>
+    <table>
+        <tr>
+            <th>項目</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td>處理器</td>
+            <td>支援 Intel® Xeon® E 系列或 AMD Ryzen® PRO 處理器</td>
+        </tr>
+        <tr>
+            <td>記憶體</td>
+            <td>16 個 DIMM 插槽，最大支援 2TB DDR4 ECC</td>
+        </tr>
+        <tr>
+            <td>存儲</td>
+            <td>4 個 NVMe SSD 插槽，支持高效存取</td>
+        </tr>
+        <tr>
+            <td>擴展插槽</td>
+            <td>PCIe 4.0 擴展插槽，支援網絡卡擴展</td>
+        </tr>
+        <tr>
+            <td>電源供應</td>
+            <td>單電源 80 PLUS 金牌級電源，兼具效能與節能</td>
+        </tr>
+        <tr>
+            <td>管理功能</td>
+            <td>基礎的遠端管理支持，適合中小企業日常運營</td>
+        </tr>
+    </table>
+</section>
 
 
-          <div class="card">
-            <div class="card-img-wrapper"><img src="../img/RackServer.png" alt=""></div>
-            <div class="card-txt-wrapper">
-                <h4>Titan-X Seris | 伺服器</h2>
-                <h2>Titan-X 5390</h2>
-                <p>高性價比運算解決方案，專為中小企業設計。</p>
-            </div>
-            <div class="btn-wrap"><button><a href="./Titan-X-5390.html">了解更多</a></button></div>
-          </div>
+<section class="use-cases">
+    <h2>應用場景</h2>
+    <p>Titan-X 5390 伺服器適合中小企業的日常 IT 環境，應用於辦公自動化、數據庫管理和一般業務應用。</p>
+</section>
 
-
-          <div class="card">
-            <div class="card-img-wrapper"><img src="../img/WorkStation.png" alt=""></div>
-            <div class="card-txt-wrapper">
-                <h4>Titan-X Seris | 伺服器</h2>
-                <h2>Titan-X 4000</h2>
-                <p>經濟實惠的運算解決方案，滿足日常辦公需求。</p>
-            </div>
-            <div class="btn-wrap"><button><a href="./Titan-X-4000.html">了解更多</a></button></div>
-          </div>
-          
-      </div>
-    </div>
-
-    
-
-  </div>
 
 <div class="footer">
     <div class="footer-info-container">
@@ -299,6 +353,7 @@
     <div class="copyright-text">
         <p>Copyright © 2024, Hercules Corporation.</p>
     </div>
+
     <style>
         .copyright * {
             margin: 0;
@@ -352,8 +407,7 @@
     </style>
 </div>
 
-  
-</body>
-<script src="../js/typing.js"></script>
 
+
+</body>
 </html>
