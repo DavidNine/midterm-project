@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercules 年度行事曆</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- 導入 font-awesome 的圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* 基本樣式設置 */
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+            color: #003366;
+        }
+
+        
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+            color: #003366;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #003366;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        /* 時間軸容器 */
+        .timeline-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* 時間軸 */
+        .timeline {
+            width: 100%;
+            height: 4px;
+            background-color: #003366;
+            position: relative;
+            border-radius: 2px;
+        }
+
+        /* 事件節點 */
+        .event {
+            position: absolute;
+            top: 12px;
+            transform: translateX(-50%);
+            text-align: center;
+            max-width: 120px;
+        }
+
+        .event-dot {
+            width: 15px;
+            height: 15px;
+            background-color: #87CEEB;
+            border: 2px solid #003366;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .event-date {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #333;
+        }
+
+        .event-description {
+            font-size: 16px;
+            color: #003366;
+            margin-top: 5px;
+        }
+
+        /* 年度日曆部分 */
+        .yearly-calendar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+        .last-or-next-month {
+            color: #cccccc;
+        }
+
+        .month {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .month h3 {
+            font-size: 20px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+
+        .day-name {
+            font-weight: bold;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .day {
+            font-size: 14px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* 標註事件的日期 */
+        .event-day {
+            background-color: #87CEEB;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="title">
+        <img src="../img/logo/logo.png" alt="Logo" class="logo">
+        <a href="../index.html">
+            <h1>Hercules</h1>
+        </a>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="./product.html">產品</a></li>
+            <li><a href="./financial_statement.html">財報</a></li>
+            <li><a href="./support.html">支援</a></li>
+        </ul>
+    </div>
+</div>
+<main class="calendar-timeline-container">
+    <h1>Hercules 2024 年度行事曆</h1>
+    <div class="timeline-container">
+        <div class="timeline"></div>
+        <div class="event" style="left: 5%;">
+            <div class="event-dot"></div>
+            <div class="event-date">1 月 15 日</div>
+            <div class="event-description">年度會議</div>
+        </div>
+        <div class="event" style="left: 20%;">
+            <div class="event-dot"></div>
+            <div class="event-date">3 月 8 日</div>
+            <div class="event-description">產品發佈</div>
+        </div>
+        <div class="event" style="left: 40%;">
+            <div class="event-dot"></div>
+            <div class="event-date">6 月 21 日</div>
+            <div class="event-description">技術研討會</div>
+        </div>
+        <div class="event" style="left: 60%;">
+            <div class="event-dot"></div>
+            <div class="event-date">9 月 15 日</div>
+            <div class="event-description">公司周年慶</div>
+        </div>
+        <div class="event" style="left: 80%;">
+            <div class="event-dot"></div>
+            <div class="event-date">11 月 30 日</div>
+            <div class="event-description">年終總結</div>
+        </div>
+    </div>
+
+    <h2>2024 年日曆</h2>
+    <div class="yearly-calendar">
+        <div class="month">
+            <h3>一月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day event-day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+                <div class="day last-or-next-month">9</div>
+                <div class="day last-or-next-month">10</div>
+            </div>
+        </div>
+
+        <div class="month">
+            <h3>二月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">28</div>
+                <div class="day last-or-next-month">29</div>
+                <div class="day last-or-next-month">30</div>
+                <div class="day last-or-next-month">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+                <div class="day last-or-next-month">9</div>
+            </div>
+        </div>
+
+        <div class="month">
+            <h3>三月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">25</div>
+                <div class="day last-or-next-month">26</div>
+                <div class="day last-or-next-month">27</div>
+                <div class="day last-or-next-month">28</div>
+                <div class="day last-or-next-month">29</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day event-day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+            </div>
+        </div>
+
+        <div class="month">
+            <h3>四月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+                <div class="day last-or-next-month">9</div>
+                <div class="day last-or-next-month">10</div>
+                <div class="day last-or-next-month">11</div>
+            </div>
+        </div>
+        <div class="month">
+            <h3>五月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">28</div>
+                <div class="day last-or-next-month">29</div>
+                <div class="day last-or-next-month">30</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+            </div>
+        </div>
+        <div class="month">
+            <h3>六月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">26</div>
+                <div class="day last-or-next-month">27</div>
+                <div class="day last-or-next-month">28</div>
+                <div class="day last-or-next-month">29</div>
+                <div class="day last-or-next-month">30</div>
+                <div class="day last-or-next-month">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day event-day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+            </div>
+        </div>
+
+        <div class="month">
+            <h3>七月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">30</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+                <div class="day last-or-next-month">9</div>
+                <div class="day last-or-next-month">10</div>
+            </div>
+        </div>
+        <div class="month">
+            <h3>八月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">28</div>
+                <div class="day last-or-next-month">29</div>
+                <div class="day last-or-next-month">30</div>
+                <div class="day last-or-next-month">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+            </div>
+        </div>
+        <div class="month">
+            <h3>九月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day event-day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+                <div class="day last-or-next-month">9</div>
+                <div class="day last-or-next-month">10</div>
+                <div class="day last-or-next-month">11</div>
+                <div class="day last-or-next-month">12</div>
+            </div>
+        </div>
+        <div class="month">
+            <h3>十月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">29</div>
+                <div class="day last-or-next-month">30</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>                
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+                <div class="day last-or-next-month">9</div>
+            </div>
+        </div>
+        <div class="month">
+            <h3>十一月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day last-or-next-month">27</div>
+                <div class="day last-or-next-month">28</div>
+                <div class="day last-or-next-month">29</div>
+                <div class="day last-or-next-month">30</div>
+                <div class="day last-or-next-month">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day event-day">30</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+            </div>
+        </div>
+        <div class="month">
+            <h3>十二月</h3>
+            <div class="days">
+                <div class="day-name">日</div>
+                <div class="day-name">一</div>
+                <div class="day-name">二</div>
+                <div class="day-name">三</div>
+                <div class="day-name">四</div>
+                <div class="day-name">五</div>
+                <div class="day-name">六</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day last-or-next-month">1</div>
+                <div class="day last-or-next-month">2</div>
+                <div class="day last-or-next-month">3</div>
+                <div class="day last-or-next-month">4</div>
+                <div class="day last-or-next-month">5</div>
+                <div class="day last-or-next-month">6</div>
+                <div class="day last-or-next-month">7</div>
+                <div class="day last-or-next-month">8</div>
+                <div class="day last-or-next-month">9</div>
+                <div class="day last-or-next-month">10</div>
+                <div class="day last-or-next-month">11</div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div class="footer">
+    <div class="footer-info-container">
+      <div class="footer-info">
+        <div class="footer-info-header-3">
+          <h3>公司資訊</h3>
+        </div>
+        <div class="footer-info-hr">
+          <hr>
+        </div>
+        <div class="footer-info-linker">
+          <a href="">關於我們</a>
+          <a href="./member.html'">成員介紹</a>
+          <a href="">公司組織</a>
+          <a href="">研究</a>
+          <a href="">技術</a>
+          <a href="">資金</a>
+          <a href="">徵才資訊</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="footer-info-header-3">
+          <h3>最新活動</h3>
+        </div>
+        <div class="footer-info-hr">
+          <hr>
+        </div>
+        <div class="footer-info-linker">
+          <a href="">新聞中心</a>
+          <a href="">關注最新消息</a>
+          <a href="">近期相關新聞報導</a>
+          <a href="">Hercules 研發大賽</a>
+          <a href="">活動紀錄</a>
+          <a href="./calender.html">2024 活動行事曆</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="footer-info-header-3">
+          <h3>相關連結</h3>
+        </div>
+        <div class="footer-info-hr">
+          <hr>
+        </div>
+        <div class="footer-info-linker">
+          <a href="">熱門文章</a>
+          <a href="">技術文件</a>
+          <a href="">訓練手冊</a>
+          <a href="">合作夥伴</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-media-link-container">
+      <div class="foot-media-link">
+        <div class="social-icons">
+            <p>關注 Hercules </p>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/DavidNine/midterm-project"><i class="fa-brands fa-github-square"></i></a>
+        </div>
+
+      </div>
+    </div>
+    <style>
+      .footer * {
+        margin: 0;
+        padding: 0;
+      }
+      .footer {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        color: rgb(255, 255, 255);
+        background-color: #003366;
+        padding: 2%;
+      }
+
+      .footer-info-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer h3 {
+        font-size: 30px;
+      }
+      .footer-info hr {
+        border: 0;
+        border-top: 1px solid rgb(153, 153, 153);
+        border-radius: 20%;
+        margin: 3% 0;
+      }
+      .footer-info {
+        width: 100%;
+        padding: 2%;
+        margin: 1% 0;
+        max-width: 20%;
+      }
+      .footer-info-linker {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+      }
+      .footer-info a {
+        font-size: 16px;
+        margin: 1% 0;
+        color: #87CEEB;
+        transition: .3s;
+      }
+      .footer-info a:hover {
+        color: #00BFFF;
+      }
+
+      .footer-media-link-container {
+        width: auto;
+        margin: auto;
+      }
+      
+      .social-icons {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        color: rgb(196, 196, 196);
+      }
+
+      .social-icons p {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+
+      .social-icons a {
+        color: rgb(196, 196, 196);
+        transition: .3s;
+      }
+      
+      .social-icons a:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      .social-icons i {
+        margin: 0 10px;
+        font-size: 18px;
+      }
+
+    </style>
+</div>
+
+<div class="copyright">
+    <div class="copyright-logo">
+        <img src="../img/logo/logo.png" alt="">
+        <h2>Hercules</h2>
+    </div>
+    <div class="copyright-linker-container">
+        
+        <a href="./private_policy.html">隱私權政策</a>
+        <div class="bar">|</div>
+        <a href="">公司條款</a>
+        <div class="bar">|</div>
+        <a href="">服務政策</a>
+        <div class="bar">|</div>
+        <a href="">聯絡我</a>
+        
+        
+    </div>
+    <div class="copyright-text">
+        <p>Copyright © 2024, Hercules Corporation.</p>
+    </div>
+
+    <style>
+        .copyright * {
+            margin: 0;
+            padding: 0;
+        }
+        .copyright {
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            color: rgb(102, 102, 102);
+            margin-left: 10%;
+            line-height: 30px;
+        }
+        
+        .copyright-logo {
+            display: flex;
+            align-items: center;
+            margin: 1% 0;
+        }
+
+        .copyright-logo img {
+            width: 40px;
+        }
+        
+        .copyright-text p{
+            font-size: 12px;
+            font-family: "Arial";
+        }
+
+        .copyright-linker-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .copyright-linker-container a {
+            transition: .3s;
+            color: rgb(102, 102, 102);
+        }
+
+        .copyright-linker-container a:hover {
+            color: rgb(172, 172, 172);
+        }
+
+        .bar {
+            color: rgb(161, 161, 161);
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+    </style>
+</div>
+</body>
+</html>
