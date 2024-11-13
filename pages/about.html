@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Titan-X 5390 伺服器 - 頂尖效能，全面應對未來需求">
-
-    <!-- <link rel="stylesheet" href="../css/basic.css"> -->
+    <meta name="description" content="Hercules - 關於我們">
+    <title>關於我們</title>
     <link rel="stylesheet" href="../css/header.css">
-  
-    <!-- 導入微軟正黑體字型 -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <!-- 導入 font-awesome 的圖示 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <title>Titan-X 5390 伺服器</title>
     <style>
+        /* 基本樣式設置 */
         body {
             font-family: "Noto Sans TC", sans-serif;
             margin: 0;
@@ -25,165 +22,118 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        a {
-            text-decoration: none;
-        }
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
+
         section {
             padding: 20px;
         }
-        section h2 {
-            color: #003366;
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        section p {
-            line-height: 1.6;
-        }
-        table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 12px;
-            text-align: center;
-        }
-        th {
-            background-color: #003366;
-            color: white;
-        }
-        .features, .specs, .use-cases {
-            margin-bottom: 40px;
-        }
         
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            color: var(--header-logo-color);
+            font-size: 36px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .ceo-name {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            text-align: left;
+        }
+
+
+        /* CEO 卡片樣式 */
+        .ceo-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-text {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .ceo-profile {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        .ceo-profile img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .ceo-profile p {
+            color: rgb(100, 100, 100);
+            font-size: 16px;
+        }
+        .ceo-profile-content-container {
+            margin-bottom: 10%;
+            margin-top: 5%;
+        }
+
     </style>
 </head>
 <body>
+
+<!-- Header -->
 <div class="header">
     <div class="title">
         <a href="../index.html" class=""><img src="../img/logo/logo.png" alt="Logo" class="logo"></a>
         <a href="../index.html">
-        <h1>Hercules</h1>
+            <h1>Hercules</h1>
         </a>
     </div>
-
     <div class="navigation">
         <ul>
-        <li><a href="./product.html">產品</a></li>
-        <li><a href="./financial_statement.html">財報</a></li>
-        <li><a href="./support.html">支援</a></li>
-        </ul>  
+            <li><a href="./product.html">產品</a></li>
+            <li><a href="./financial_statement.html">財報</a></li>
+            <li><a href="./support.html">支援</a></li>
+        </ul>
     </div>
-
-
-    <style>
-        .sticky {
-        position: fixed;
-        top: 0;
-        padding: 10px;
-        width: 100%;
-        z-index: 1000;
-        animation: slideIn .1s linear 0s;
-        }
-
-        @keyframes slideIn {
-        from {
-            top: -100px;
-        }
-        to {
-            top: 0px;
-        }
-        }
-    </style>
-    <script>
-
-        window.onscroll = function() {stickyHeader()};
-
-        const header = document.querySelector('.header');
-
-        function stickyHeader() {
-        if (window.pageYOffset > 300) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-        }
-
-
-    </script>
 </div>
 
 
+<section class="ceo-profile-content-container">
+    <div class="ceo-name">
+        <div class="text-container">
+            <h2>關於 Hercules</h2>
+            <p>專注於伺服器及 3C 周邊產品的專業供應商</p>
+        </div>
+    </div>
+    
+    <div class="ceo-container">
+        <div class="ceo-profile">
+            
+            <img src="../img/logo/logo.png" alt="Logo">
 
-<header>
-    <h1>Titan-X 5390 伺服器</h1>
-    <p>高性價比運算解決方案，專為中小企業設計</p>
-</header>
+            <div class="profile-text">
+                <p> 
+                    Hercules 是一家專注於伺服器及 3C 周邊產品的專業供應商，<br>
+                    致力於提供高效能、高穩定性的企業級解決方案。從可靠的伺服器產品到各類 3C 配件，<br>
+                    Hercules 提供全面的硬體支持，適合企業數據中心、個人工作站及各類需求場景。<br>
+                    我們不僅強調產品的技術創新和耐用性，還專注於售後服務和客戶支持，為用戶打造完善的解決方案和優質的使用體驗。<br>
+                </p>
+            </div>
 
-<section class="features">
-    <h2>關鍵特點</h2>
-    <p>Titan-X 5390 伺服器平衡性能與成本，為中小企業提供可靠的計算能力，滿足日常業務運行需求。</p>
-    <ul>
-        <li>穩定運行效能 - 支援多核心處理器，足夠應對日常業務需求</li>
-        <li>經濟實惠的散熱設計 - 高效風扇和散熱技術，確保穩定運行</li>
-        <li>靈活的擴展性 - 支援 16 個 DIMM 插槽，最大支援 2TB 記憶體</li>
-        <li>可靠的數據保護 - ECC 記憶體與 RAID 支援，保障日常數據安全</li>
-    </ul>
+        </div>
+    </div>
 </section>
-
-<section class="specs">
-    <h2>技術規格</h2>
-    <table>
-        <tr>
-            <th>項目</th>
-            <th>說明</th>
-        </tr>
-        <tr>
-            <td>處理器</td>
-            <td>支援 Intel® Xeon® E 系列或 AMD Ryzen® PRO 處理器</td>
-        </tr>
-        <tr>
-            <td>記憶體</td>
-            <td>16 個 DIMM 插槽，最大支援 2TB DDR4 ECC</td>
-        </tr>
-        <tr>
-            <td>存儲</td>
-            <td>4 個 NVMe SSD 插槽，支持高效存取</td>
-        </tr>
-        <tr>
-            <td>擴展插槽</td>
-            <td>PCIe 4.0 擴展插槽，支援網絡卡擴展</td>
-        </tr>
-        <tr>
-            <td>電源供應</td>
-            <td>單電源 80 PLUS 金牌級電源，兼具效能與節能</td>
-        </tr>
-        <tr>
-            <td>管理功能</td>
-            <td>基礎的遠端管理支持，適合中小企業日常運營</td>
-        </tr>
-    </table>
-</section>
-
-
-<section class="use-cases">
-    <h2>應用場景</h2>
-    <p>Titan-X 5390 伺服器適合中小企業的日常 IT 環境，應用於辦公自動化、數據庫管理和一般業務應用。</p>
-</section>
-
 
 <div class="footer">
     <div class="footer-info-container">
@@ -195,7 +145,7 @@
           <hr>
         </div>
         <div class="footer-info-linker">
-          <a href="./about.html">關於我們</a>
+          <a href="">關於我們</a>
           <a href="./member.html">成員介紹</a>
           <a href="">公司組織</a>
           <a href="">研究</a>
@@ -406,8 +356,5 @@
         }
     </style>
 </div>
-
-
-
 </body>
 </html>
